@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/ui/layouts/Navbar";
+import Navbar from "@/components/layouts/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,9 +20,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.className} h-full antialiased`}
     >
-      
-      <Toaster position="top-right" />
-      <body className="min-h-full flex flex-col"><Navbar />{children}</body>
+      <body className="min-h-full bg-zinc-950 text-white">
+        <Toaster position="top-right" />
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

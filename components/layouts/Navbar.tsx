@@ -1,12 +1,14 @@
-import { HamburgerIcon } from "lucide-react";
+"use client"
+
 import Image from "next/image";
-import React from "react";
-import { Input } from "../input";
-import { Field } from "../field";
+import { Input } from "../ui/input";
+import { Field } from "../ui/field";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 
 function Navbar() {
   return (
-    <header className="shadow-md sticky top-0">
+    <header className="shadow-sm shadow-white sticky top-0 z-50 sm:fixed sm:top-0 sm:z-50">
       <nav>
         <ul className="flex items-center justify-between gap-5 mx-7">
           <li>
@@ -15,7 +17,7 @@ function Navbar() {
               alt="Logo"
               height={350}
               width={350}
-              className="overflow-hidden"
+              className="invert "
             />
           </li>
           <li>
@@ -24,7 +26,7 @@ function Navbar() {
             </Field>
           </li>
           <li>
-            <HamburgerIcon className="h-7 w-7"/>
+            <RxHamburgerMenu  className="h-7 w-7 text-white"/>
           </li>
         </ul>
       </nav>

@@ -1,10 +1,11 @@
+import TrendingSection from '@/components/features/Home/TrendingSection'
 import React from 'react'
 
 function MainPage() {
   return (
     <main>
-      <section>
-        <h1>Discover</h1>
+      <section title='Trending'>
+        <TrendingSection />
       </section>
     </main>
   )
