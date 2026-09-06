@@ -14,8 +14,8 @@ function TrendingSection() {
   return (
     <div className="m-5">
       <h1 className="text-2xl font-semibold">Trending Now</h1>
-      <p></p>
-      <Carousel className="w-full">
+      <p className="text-gray-300 text-base">Check out what’s trending today</p>
+      <Carousel className="flex items-center mx-10 my-5">
         <CarouselContent>
           <CarouselItem>
             <div className="p-1">
@@ -26,7 +26,7 @@ function TrendingSection() {
                     alt="Logo"
                     height={900}
                     width={900}
-                    className=""
+                    className="revert"
                   />
                 </CardContent>
               </Card>
